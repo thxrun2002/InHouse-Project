@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapView"
+    android:layout_width="412dp"
+    android:layout_height="728dp">
+
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        tools:layout="@layout/activity_useractivity" />
+
+    <EditText
+        android:id="@+id/locationText"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Enter pickup location..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapView"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintVertical_bias="0.111"
+        android:text=""/>
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toEndOf="@+id/locationText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="18dp"
+        app:srcCompat = "@drawable/places_ic_search"
+        android:onClick="searchLocation"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findDriver"
+        android:onClick="finddriver"
+        android:text="FIND DRIVERS "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="130dp"
+        />
+
+</FrameLayout>
